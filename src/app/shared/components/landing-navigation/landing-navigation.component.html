@@ -1,0 +1,72 @@
+<!-- desktop -->
+<header
+  class="bg-gray-50 h-[80px] items-center justify-between w-4/5 mx-auto sticky z-50 hidden lg:flex"
+>
+  <div class="logo">
+    <h1 class="text-primaryColor text-3xl font-semibold">
+      Rent<span class="text-darkColor">ease</span>
+    </h1>
+  </div>
+  <nav>
+    <ul class="flex gap-14">
+      <li><a href="">home</a></li>
+      <li><a href="">properties</a></li>
+      <li><a href="">about Us</a></li>
+      <li><a href="">contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="login">
+    <button
+      class="bg-primaryColor px-5 py-1 capitalize text-white font-meduim rounded-[4px] hover:bg-white hover:border hover:border-primaryColor hover:text-darkColor transition-all duration-200"
+    >
+      login
+    </button>
+  </div>
+</header>
+
+<!-- /mobile -->
+<header
+  class="bg-gray-50 h-[60px] flex lg:hidden items-center justify-between px-3"
+>
+  <div class="upper flex justify-between w-full">
+    <h1 class="text-primaryColor text-3xl font-semibold">
+      Rent<span class="text-darkColor">ease</span>
+    </h1>
+    <button
+      class="p-2 bg-gray-200 rounded-[5px] cursor-pointer"
+      (click)="ShowMenuToggle()"
+    >
+      <lucide-icon
+        *ngIf="!showMenu"
+        [img]="menuIcon"
+        class="cursor-pointer"
+      ></lucide-icon>
+
+      <lucide-icon
+        *ngIf="showMenu"
+        [img]="menuClose"
+        class="cursor-pointer"
+      ></lucide-icon>
+    </button>
+  </div>
+  <div
+    class="right absolute top-16 bottom-0 left-0 right-0 bg-white px-3"
+    *ngIf="showMenu"
+  >
+    <nav class="flex flex-col items-center pt-2">
+      <ul class="flex flex-col items-center gap-4 mt-3">
+        <li><a href="">home</a></li>
+        <li><a href="">properties</a></li>
+        <li><a href="">about Us</a></li>
+        <li><a href="">contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="login w-4/5 mx-auto flex justify-center my-3">
+      <button
+        class="bg-primaryColor px-5 py-1 capitalize text-white font-meduim rounded-[4px] hover:bg-white hover:border hover:border-primaryColor hover:text-darkColor transition-all duration-200"
+      >
+        login
+      </button>
+    </div>
+  </div>
+</header>

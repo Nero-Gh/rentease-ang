@@ -1,0 +1,114 @@
+<div class="bg-gray-50">
+  <app-landing-navigation />
+</div>
+<section class="banner h-[25rem] my-20">
+  <app-landing-wrapper>
+    <div class="rounded-lg overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="h-[25rem] w-full object-cover hover:scale-105 transition-all"
+      />
+    </div>
+  </app-landing-wrapper>
+</section>
+<section class="my-20 border-b">
+  <app-landing-wrapper>
+    <ul class="flex gap-5 text-darkColor">
+      <li
+        class="capitalize cursor-pointer py-5 h-full border-b-2 border-primaryColor"
+      >
+        room overview
+      </li>
+      <li class="capitalize cursor-pointer py-5">photos</li>
+      <li class="capitalize cursor-pointer py-5">rating</li>
+      <li class="capitalize cursor-pointer py-5">about</li>
+    </ul>
+  </app-landing-wrapper>
+</section>
+
+<!-- room detail -->
+<section class="mt-20">
+  <app-landing-wrapper>
+    <div class="lg:w-[40%] w-full text-darkColor">
+      <h2 class="capitalize text-2xl font-medium">room description</h2>
+      <p class="my-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ducimus
+        aut beatae et. Voluptatibus repudiandae laboriosam quaerat, quod unde
+        error iste! Harum tempore ut, porro consequatur amet eius voluptatibus
+        vel.
+      </p>
+    </div>
+    <div class="lg:w-[40%] w-full text-darkColor mt-10">
+      <h2 class="capitalize text-2xl font-medium">room properties</h2>
+      <div class="flex flex-wrap lg:flex-nowrap items-center gap-3 w-[20rem]">
+        <div class="my-3 text-darkColor flex gap-2 items-center">
+          <lucide-angular [img]="bedroom"></lucide-angular>
+          <span class="capitalize">bedroom</span>
+        </div>
+        <div class="my-3 text-darkColor flex gap-2 items-center">
+          <lucide-angular [img]="washroom"></lucide-angular>
+          <span class="capitalize">washroom</span>
+        </div>
+        <div class="my-3 text-darkColor flex gap-2 items-center">
+          <lucide-angular [img]="waves"></lucide-angular>
+          <span class="capitalize">pipe</span>
+        </div>
+        <div class="my-3 text-darkColor flex gap-2 items-center">
+          <lucide-angular [img]="kitchen"></lucide-angular>
+          <span class="capitalize">Kitchen</span>
+        </div>
+      </div>
+    </div>
+  </app-landing-wrapper>
+</section>
+
+<section>
+  <app-landing-wrapper>
+    <div class="w-full text-darkColor my-10">
+      <h2 class="capitalize text-2xl font-medium">photos</h2>
+
+      <div class="grid lg:grid-cols-3 w-full bg grid-cols-1 gap-3 mt-5">
+        <img
+          src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="House Photo"
+          class="w-full h-[350px] object-cover hover:scale-105 transition-all"
+          class="hover:scale-105 transition-all"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="House Photo"
+          class="w-full h-[250px] object-cover hover:scale-105 transition-all"
+          class="hover:scale-105 transition-all"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="House Photo"
+          class="w-full h-[200px] object-cover hover:scale-105 transition-all"
+          class="hover:scale-105 transition-all"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="House Photo"
+          class="w-full h-[300px] object-cover hover:scale-105 transition-all"
+          class="hover:scale-105 transition-all"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="House Photo"
+          class="w-full h-[400px] object-cover hover:scale-105 transition-all"
+          class="hover:scale-105 transition-all"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="House Photo"
+          class="w-full h-[450px] object-cover hover:scale-105 transition-all"
+          class="hover:scale-105 transition-all"
+        />
+      </div>
+    </div>
+  </app-landing-wrapper>
+</section>
+<div class="bg-gray-50">
+  <app-landing-footer />
+</div>

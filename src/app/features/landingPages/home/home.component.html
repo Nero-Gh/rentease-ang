@@ -1,0 +1,120 @@
+<div class="bg-gray-50">
+  <app-landing-navigation />
+</div>
+<app-landing-wrapper>
+  <!-- banner -->
+  <section>
+    <div class="title mt-10 text-center flex flex-col gap-4 lg:mt-16">
+      <h1 class="text-4xl lg:text-6xl font-semibold">
+        Find comfort like your own home
+      </h1>
+      <p>From classic, elegant to modern and minimalist you can find it here</p>
+      <div class="rounded-[8px] w-full h-[25rem] lg:h-[35rem] overflow-hidden">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1661962296943-bc59322f6424?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Hostel Image"
+          class="rounded-[8px] transition-transform duration-200 hover:scale-105"
+        />
+      </div>
+    </div>
+  </section>
+</app-landing-wrapper>
+<section class="h-fit lg:h-[130px] bg-gray-50 lg:mt-20">
+  <app-landing-wrapper>
+    <!-- room-types -->
+    <section
+      class="py-10 lg:py-5 flex flex-col justify-center items-center lg:items-start gap-4 lg:gap-0 lg:flex-row lg:justify-between"
+    >
+      <div
+        class="card-container w-[150px] flex flex-col items-center hover:scale-105 transition-all"
+        *ngFor="let item of rooms; trackBy: trackByRoomType"
+      >
+        <img [src]="item.image" alt="{{ item.roomType }}" class="w-[50px]" />
+        <div class="text-center text-darkColor my-1 capitalize">
+          <strong>{{ item.total }}+</strong> {{ item.roomType }}
+        </div>
+      </div>
+    </section>
+  </app-landing-wrapper>
+</section>
+
+<section>
+  <app-landing-wrapper>
+    <!-- properties -->
+    <div class="my-20">
+      <!-- upper -->
+      <div
+        class="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-0 justify-between"
+      >
+        <div class="flex flex-col gap-4 text-darkColor">
+          <h2 class="text-3xl font-semibold">
+            Good deals at Rent<span class="text-primaryColor">ease</span>
+          </h2>
+          <p>
+            Discover amazing properties with great deals tailored just for you.
+          </p>
+        </div>
+        <button
+          class="capitalize text-lg font-medium text-primaryColor hover:text-darkColor"
+        >
+          see all
+        </button>
+      </div>
+
+      <!-- lower -->
+      <div class="flex flex-wrap justify-between overflow-hidden">
+        <!-- card -->
+        @for (item of cardRoom; track $index) {
+        <div class="mt-10 flex">
+          <a routerLink="/sd">
+            <div
+              class="w-[25.18rem] overflow-hidden flex flex-col gap-2 rounded-lg text-darkColor bg-gray-50/50 pb-3 cursor-pointer shadow"
+            >
+              <img
+                [src]="item.image"
+                [alt]="item.name"
+                class="hover:scale-105 transition-all h-[14rem]"
+              />
+              <div class="px-2">
+                <h3 class="text-xl font-medium">{{ item.name }}</h3>
+                <p class="text-gray-400">
+                  <span class="text-primaryColor font-medium mr-2"
+                    >Ghc 2.0000</span
+                  >/<span> {{ item.location }}</span>
+                </p>
+              </div>
+              <div class="flex gap-2 text-gray-400 text-sm mt-2">
+                <div class="flex gap-2 px-2">
+                  <lucide-icon
+                    [name]="item.icon"
+                    class="w-[20px]"
+                  ></lucide-icon>
+                  <p>2 rooms</p>
+                </div>
+                <div class="flex gap-2 px-2">
+                  <lucide-icon
+                    [name]="item.kitchenIcon"
+                    class="w-[20px]"
+                  ></lucide-icon>
+                  <p>2 Kitchen</p>
+                </div>
+                <div class="flex gap-2 px-2">
+                  <lucide-icon
+                    [name]="item.washroomIcon"
+                    class="w-[20px]"
+                  ></lucide-icon>
+                  <p>2 rooms</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        }
+      </div>
+    </div>
+  </app-landing-wrapper>
+</section>
+
+<div class="bg-gray-50">
+  <app-landing-footer />
+</div>

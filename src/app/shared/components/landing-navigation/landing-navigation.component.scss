@@ -1,0 +1,19 @@
+header {
+  nav {
+    ul {
+      li {
+        text-transform: capitalize !important;
+        transition: all ease-in 200ms;
+        font-weight: 500px;
+        a {
+          cursor: pointer;
+        }
+
+        &:hover {
+          color: #11999e;
+          border-bottom: 1px solid #11999e;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+<div class="bg-gray-50">
+  <app-landing-navigation />
+</div>
+<section class="banner h-[25rem] my-20">
+  <app-landing-wrapper>
+    <div>
+      <h1 class="text-3xl font-semibold mb-16">Properties</h1>
+    </div>
+    <div class="flex items-center justify-between">
+      <div class="flex gap-2 items-center text-xl capitalize">
+        <lucide-angular [name]="filterIcon" /><span>filter</span>
+      </div>
+      <select
+        name=""
+        id=""
+        class="py-2 px-3 bg-primaryColor/10 rounded flex flex-col focus:outline-none"
+      >
+        <option value="">Sort the best match</option>
+      </select>
+    </div>
+    <div>
+      <div class="flex flex-wrap justify-between overflow-hidden">
+        <!-- card -->
+        @for (item of cardRoom; track $index) {
+        <div class="mt-10 flex">
+          <a routerLink="/dd">
+            <div
+              class="w-[25.18rem] overflow-hidden flex flex-col gap-2 rounded-lg text-darkColor bg-gray-50/50 pb-3 cursor-pointer shadow"
+            >
+              <img
+                [src]="item.image"
+                [alt]="item.name"
+                class="hover:scale-105 transition-all h-[14rem]"
+              />
+              <div class="px-2">
+                <h3 class="text-xl font-medium">{{ item.name }}</h3>
+                <p class="text-gray-400">
+                  <span class="text-primaryColor font-medium mr-2"
+                    >Ghc 2.0000</span
+                  >/<span> {{ item.location }}</span>
+                </p>
+              </div>
+              <div class="flex gap-2 text-gray-400 text-sm mt-2">
+                <div class="flex gap-2 px-2">
+                  <lucide-icon
+                    [name]="item.icon"
+                    class="w-[20px]"
+                  ></lucide-icon>
+                  <p>2 rooms</p>
+                </div>
+                <div class="flex gap-2 px-2">
+                  <lucide-icon
+                    [name]="item.kitchenIcon"
+                    class="w-[20px]"
+                  ></lucide-icon>
+                  <p>2 Kitchen</p>
+                </div>
+                <div class="flex gap-2 px-2">
+                  <lucide-icon
+                    [name]="item.washroomIcon"
+                    class="w-[20px]"
+                  ></lucide-icon>
+                  <p>2 rooms</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        }
+      </div>
+    </div>
+  </app-landing-wrapper>
+  <div class="bg-gray-50 mt-20">
+    <app-landing-footer />
+  </div>
+</section>

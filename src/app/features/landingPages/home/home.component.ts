@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { Bath, BedDouble, ChefHat, LucideAngularModule } from 'lucide-angular';
-import { LandingNavigationComponent } from '../../../shared/components/landing-navigation/landing-navigation.component';
-import { LandingWrapperComponent } from '../../../shared/components/landing-wrapper/landing-wrapper.component';
-import { CardRoom, Room } from '../models/room';
-import { LandingFooterComponent } from '../../../shared/components/landing-footer/landing-footer.component';
-import { RouterLink } from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
+import {Bath, BedDouble, ChefHat, LucideAngularModule} from 'lucide-angular';
+import {LandingNavigationComponent} from '../../../shared/components/landing-navigation/landing-navigation.component';
+import {LandingWrapperComponent} from '../../../shared/components/landing-wrapper/landing-wrapper.component';
+import {CardRoom, Room} from '../models/room';
+import {LandingFooterComponent} from '../../../shared/components/landing-footer/landing-footer.component';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,12 +16,13 @@ import { RouterLink } from '@angular/router';
     LandingNavigationComponent,
     LucideAngularModule,
     LandingFooterComponent,
-    RouterLink,
+    RouterLink
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  color="pink"
   public rooms: Room[] = [
     {
       image: 'assets/bedroom.png',

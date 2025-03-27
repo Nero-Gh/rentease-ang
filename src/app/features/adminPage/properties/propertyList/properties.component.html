@@ -1,0 +1,100 @@
+<section>
+<!--  <app-landing-wrapper>-->
+    <div class="flex pb-10">
+      <div>
+        <h2 class="text-2xl font-medium text-gray-500">Properties</h2>
+      </div>
+    </div>
+  <div class="flex items-center justify-between">
+   <div class="flex items-center gap-3">
+     <div class="relative">
+       <lucide-angular [name]="searchIcon" class="w-4 h-4 absolute top-1 left-1 text-gray-400"/>
+       <input type="text" placeholder="Search property name..." class="p-1 pl-8">
+     </div>
+     <select
+       class="border border-gray-300 rounded-md px-2 py-1 focus:outline-none"
+     >
+       <option value="">Sort the best match</option>
+       <option value="ace">A-Z</option>
+       <option value="dec">Z-A</option>
+     </select>
+   </div>
+
+     <div>
+        <button
+          class="bg-primaryColor
+          text-white
+          px-3
+          py-1
+          rounded-md
+          focus:outline-none
+          hover:bg-primaryColor/90"
+          (click)="openSliderModal()"
+          >
+          Add Property
+        </button>
+     </div>
+  </div>
+    <div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-1">
+        <!-- card -->
+        @for (item of cardRoom; track $index) {
+        <div class="mt-10 flex relative w-[24.3rem]">
+          <a routerLink="/dd">
+            <div
+              class="w-[23.3rem] overflow-hidden flex flex-col gap-2 rounded-lg text-darkColor bg-gray-50/50 pb-3 cursor-pointer shadow"
+            >
+              <img
+                [src]="item.image"
+                [alt]="item.name"
+                class="hover:scale-105 transition-all h-[12rem]"
+              />
+              <div class="px-2">
+                <h3 class="text-xl font-medium">{{ item.name }}</h3>
+                <p class="text-gray-400">
+                  <span class="text-primaryColor font-medium mr-2"
+                    >Ghc 2.0000</span
+                  >/<span> {{ item.location }}</span>
+                </p>
+              </div>
+              <div class="flex gap-2 text-gray-400 text-sm mt-2">
+                <div class="flex gap-2 px-2">
+                  <lucide-icon
+                    [name]="item.icon"
+                    class="w-[20px]"
+                  ></lucide-icon>
+                  <p>2 rooms</p>
+                </div>
+                <div class="flex gap-2 px-2">
+                  <lucide-icon
+                    [name]="item.kitchenIcon"
+                    class="w-[20px]"
+                  ></lucide-icon>
+                  <p>2 Kitchen</p>
+                </div>
+                <div class="flex gap-2 px-2">
+                  <lucide-icon
+                    [name]="item.washroomIcon"
+                    class="w-[20px]"
+                  ></lucide-icon>
+                  <p>2 rooms</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="absolute top-5 right-2 hover:bg-white text-white hover:text-primaryColor w-8 h-8 flex items-center justify-center rounded-sm">
+            <lucide-angular [name]="menuOptions" class="w-5 h-5  cursor-pointer"/>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+<!--  </app-landing-wrapper>-->
+</section>
+
+
+<app-form-slider-modal [open]="openSlider" (close)="openSliderModal()">
+ <div class="backdrop-blur-sm">
+   <app-add-property></app-add-property>
+ </div>
+</app-form-slider-modal>

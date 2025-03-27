@@ -1,0 +1,9 @@
+
+
+
+<div class="slide-modal backdrop:blur-sm absolute top-0 left-0 bottom-0 right-0 h-screen w-[30vw] bg-white shadow z-30 " *ngIf="open">
+ <div class="px-4 py-8 flex flex-col gap-8  h-full">
+   <button class=" text-right  " (click)="closeModal()">✖</button>
+   <ng-content></ng-content>
+ </div>
+</div>

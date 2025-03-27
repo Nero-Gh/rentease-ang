@@ -47,10 +47,10 @@
         class="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-0 justify-between"
       >
         <div class="flex flex-col gap-4 text-darkColor">
-          <h2 class="text-3xl font-semibold">
+          <h2 class="text-3xl font-semibold" >
             Good deals at Rent<span class="text-primaryColor">ease</span>
           </h2>
-          <p>
+          <p >
             Discover amazing properties with great deals tailored just for you.
           </p>
         </div>
@@ -62,17 +62,17 @@
       </div>
 
       <!-- lower -->
-      <div class="flex flex-wrap justify-between overflow-hidden">
-        <!-- card -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2">
         @for (item of cardRoom; track $index) {
         <div class="mt-10 flex">
-          <a routerLink="/sd">
+          <a routerLink="sd">
             <div
-              class="w-[25.18rem] overflow-hidden flex flex-col gap-2 rounded-lg text-darkColor bg-gray-50/50 pb-3 cursor-pointer shadow"
+              class="w-[20.18rem] overflow-hidden flex flex-col gap-2 rounded-lg text-darkColor bg-gray-50/50 pb-3 cursor-pointer shadow"
             >
               <img
                 [src]="item.image"
                 [alt]="item.name"
+                loading="lazy"
                 class="hover:scale-105 transition-all h-[14rem]"
               />
               <div class="px-2">

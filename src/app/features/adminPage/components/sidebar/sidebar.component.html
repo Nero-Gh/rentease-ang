@@ -1,0 +1,30 @@
+<aside class="flex flex-col gap-10 relative p-2 duration-300 transition-[width] ease-in-out" [ngClass]="!menuOpen? 'w-56 ' : 'w-fit'">
+  <div class="flex items-center gap-2">
+    <lucide-angular [name]="homeIcon" class="w-8 h-8 font-bold text-primaryColor"/>
+    @if (!menuOpen) {
+    <h1 class="text-primaryColor text-3xl font-semibold">Rent<span class="text-secondaryColor">Ease</span></h1>
+    }
+  </div>
+  <div class="menu">
+    <ul class="flex flex-col gap-2">
+      @for (menu of menuItems ; track menu.icon) {
+
+
+        @if (!menuOpen) {
+
+          <li ><a [routerLink]="menu.link" routerLinkActive="bg-primaryColor text-white  border-l border-l-4 border-l-secondaryColor" class="flex items-center gap-2 text-lg w-full hover:text-white hover:bg-primaryColor hover:border-l hover:border-l-4 hover:border-l-secondaryColor duration-200 transition-all rounded-sm p-1" ><lucide-angular [name]="menu.icon" class="w-5 h-5"/><span>{{menu
+            .menu}}</span></a></li>
+
+        } @else {
+          <li ><a [routerLink]="menu.link" routerLinkActive="bg-primaryColor text-white  border-l border-l-4 border-l-secondaryColor" class="flex items-center gap-2 text-lg w-full hover:text-white hover:bg-primaryColor hover:border-l hover:border-l-4 hover:border-l-secondaryColor duration-200 transition-all rounded-sm p-1" ><lucide-angular [name]="menu.icon" class="w-5 h-5"/></a></li>
+
+        }
+      }
+
+    </ul>
+  </div>
+  <button class="absolute top-5" (click)="menuHandler()" [ngClass]="!menuOpen ? '-right-2' : '-right-8'">
+    <lucide-angular [name]="!menuOpen ? sideBarIconClose : sideBarIconOpen" class="w-6 h-6 cursor-pointer text-primaryColor transition-transform duration-300 ease-in-out rotate-0"
+                    [ngClass]="menuOpen ? 'rotate-180' : 'rotate-0'"/>
+  </button>
+</aside>
